@@ -133,4 +133,36 @@ if (x==0)
             }
    }
 }
-	
+int main (){
+	int pilih;
+	int n;
+	cout<<"============================================================================================="<<endl;
+	cout<<"                       Program Operasi Statistika Sederhana"<<endl;
+	cout<<"=============================================================================================\n"<<endl;
+	cout<<"Berapa banyak nilai yang anda masukan = ";
+	cin>>n;
+	int a[n];
+		int *pA=a;
+		cout<<"masukan nilai : "<<endl;
+		
+		for(int i = 0; i < n; i++){
+			cin>>a[i];
+		}
+
+	cout<<"\nOperasi apa yang anda mau?"<<endl;
+	cout<<"1.Mean  2.Median  3. Modus\n Pilihan Anda : ";
+	cin>>pilih;
+	cout<<endl;
+	switch (pilih){
+		case 1:
+			mean(pA,n);
+			break;
+		case 2 :
+			median (n ,pA);
+			break;
+		case 3 :
+			modus(pA,n);
+			break;
+	}
+	return 0;
+}	
