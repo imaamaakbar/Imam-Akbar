@@ -1,2 +1,0 @@
-# Imam-Akbar
-Pemrograman Terstruktur
