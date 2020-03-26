@@ -64,4 +64,73 @@ x=0;
             }
         }
     }
+	cout<<" jika diurutkan maka : ";
+	 for(int i=0;i<n;i++){
+	 	cout<<*(pA+i)<<" ";
+	 	
+	 }
+	 cout<<endl;
+//menghitung berapa kali muncul tiap angka
+	for(int c=0;c<n;c++)
+	{
+	total[c]=0;
+	for(int i=0;i<n;i++)
+	{
+	if(*(pA+c)==*(pA+i))
+	{
+	total[c]++;
+	}
+	}
+	}
+//menentukan nilai yang paling sering muncul
+	for(int c=0;c<n;c++)
+	{
+		if(total[c]>k)
+		{
+		k=total[c];
+		}
+	}
+//jika modus > 1
+
+	for(int c=0;c<n;c++)
+	{
+		if(x==0){
+			mod[x]=0;}
+		else {
+			mod[x]=mod[x-1];}
+			
+		if(total[c]==k)
+		{
+			if(*(pA+c)!=mod[x])
+			{
+				mod[x]=*(pA+c);
+				x++;
+			}
+		}
+	}
+
+//jika banyak yang muncul = n
+	int z=0;
+	for(int c=0;c<n;c++)
+	{
+	if(total[c]==k)
+		{
+		z++;
+		}
+	}
+	if(z==n)
+		{
+		x=0;
+		}
+if (x==0)
+            cout<<"Tidak Ada Modus!"<<endl;
+   else
+   {
+            cout<<"Modus : ";
+            for(int c=0;c<x;c++)
+            {
+            	cout<<mod[c]<<" ";
+            }
+   }
+}
 	
